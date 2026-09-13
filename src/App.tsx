@@ -1,4 +1,5 @@
 import { useState } from "react";
+import heroImg from "./assets/hero.png";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -102,75 +103,66 @@ function App() {
       </nav>
 
       {/*HERO SECTION */}
-<section
-  id="home"
-  className="mx-auto max-w-[1400px] px-6 py-16 lg:px-16 lg:py-24"
->
-  <div className="grid items-center gap-12 md:grid-cols-2">
+      <section
+        id="home"
+        className="mx-auto max-w-[1400px] px-6 py-16 lg:px-16 lg:py-24"
+      >
+        <div className="grid items-center gap-12 md:grid-cols-2">
+          {/* LEFT CONTENT */}
+          <div>
+            <h1 className="text-4xl font-extrabold leading-tight text-[#111827] sm:text-5xl lg:text-6xl">
+              Build Your Ideal
+              <br />
+              <span
+                style={{
+                  background:
+                    "linear-gradient(90deg, #ff6b35, #e91e8c, #9c27b0)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                Development Stack
+              </span>
+            </h1>
 
-    {/* LEFT CONTENT */}
-    <div>
+            <p className="mt-6 max-w-xl text-base leading-7 text-gray-500 sm:text-lg">
+              Explore frontend, backend, database, and tooling options, compare
+              them side by side, and put together the stack that fits your next
+              project.
+            </p>
 
-      <h1 className="text-4xl font-extrabold leading-tight text-[#111827] sm:text-5xl lg:text-6xl">
-        Build Your Ideal
-        <br />
+            {/* BUTTONS */}
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href="#technologies"
+                className="rounded-lg px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:opacity-90"
+                style={{
+                  background:
+                    "linear-gradient(90deg, #ff6b35, #e91e8c, #9c27b0)",
+                }}
+              >
+                Explore Technologies
+              </a>
 
-        <span
-          style={{
-            background:
-              "linear-gradient(90deg, #ff6b35, #e91e8c, #9c27b0)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-          }}
-        >
-          Development Stack
-        </span>
-      </h1>
+              <a
+                href="#about"
+                className="rounded-lg border border-gray-200 px-6 py-3 text-sm font-medium text-gray-600 transition hover:border-pink-300"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
 
-      <p className="mt-6 max-w-xl text-base leading-7 text-gray-500 sm:text-lg">
-        Explore frontend, backend, database, and tooling options,
-        compare them side by side, and put together the stack that
-        fits your next project.
-      </p>
-
-      {/* BUTTONS */}
-      <div className="mt-8 flex flex-wrap gap-3">
-
-        <a
-          href="#technologies"
-          className="rounded-lg px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:opacity-90"
-          style={{
-            background:
-              "linear-gradient(90deg, #ff6b35, #e91e8c, #9c27b0)",
-          }}
-        >
-          Explore Technologies
-        </a>
-
-        <a
-          href="#about"
-          className="rounded-lg border border-gray-200 px-6 py-3 text-sm font-medium text-gray-600 transition hover:border-pink-300"
-        >
-          Learn More
-        </a>
-
-      </div>
-
-    </div>
-
-    {/* RIGHT IMAGE */}
-    <div className="flex justify-center">
-
-      <img
-        src="/src/assets/hero.png"
-        alt="Development Stack"
-        className="w-full max-w-[430px] object-contain"
-      />
-
-    </div>
-
-  </div>
-</section>
+          {/* RIGHT IMAGE */}
+          <div className="flex justify-center">
+            <img
+              src={heroImg}
+              alt="Development Stack"
+              className="w-full max-w-[430px] object-contain"
+            />
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
