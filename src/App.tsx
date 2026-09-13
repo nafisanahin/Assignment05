@@ -1,8 +1,34 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import heroImg from "./assets/hero.png";
+
+interface Technology {
+  id: string;
+  name: string;
+  category: string;
+  description: string;
+  icon: string;
+  rating: number;
+  difficulty: string;
+  badge: string;
+}
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [technologies, setTechnologies] = useState<Technology[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("/technologies.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setTechnologies(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.log(error);
+        setLoading(false);
+      });
+  }, []);
 
   return (
     <div className="min-h-screen bg-white">
