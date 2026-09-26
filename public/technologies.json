@@ -7,7 +7,9 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
-    "badge": "Popular"
+    "badge": "Popular",
+    "badgeColor": "#E0F2FE",
+    "badgeTextColor": "#0284C7"
   },
   {
     "id": "vuejs",
@@ -17,7 +19,9 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
     "rating": 4.8,
     "difficulty": "Beginner-Friendly",
-    "badge": "Versatile"
+    "badge": "Versatile",
+    "badgeColor": "#D1FAE5",
+    "badgeTextColor": "#059669"
   },
   {
     "id": "svelte",
@@ -27,7 +31,9 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg",
     "rating": 4.8,
     "difficulty": "Intermediate",
-    "badge": "Fast"
+    "badge": "Fast",
+    "badgeColor": "#FFEDD5",
+    "badgeTextColor": "#EA580C"
   },
   {
     "id": "nextjs",
@@ -36,8 +42,7 @@
     "description": "The React framework for full-stack web applications with hybrid server and client rendering.",
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
     "rating": 4.9,
-    "difficulty": "Intermediate",
-    "badge": "Popular"
+    "difficulty": "Intermediate"
   },
   {
     "id": "nodejs",
@@ -47,7 +52,9 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
     "rating": 4.8,
     "difficulty": "Intermediate",
-    "badge": "Standard"
+    "badge": "Standard",
+    "badgeColor": "#D1FAE5",
+    "badgeTextColor": "#059669"
   },
   {
     "id": "postgresql",
@@ -57,7 +64,9 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
     "rating": 4.9,
     "difficulty": "Intermediate",
-    "badge": "Top SQL"
+    "badge": "Top SQL",
+    "badgeColor": "#DBEAFE",
+    "badgeTextColor": "#2563EB"
   },
   {
     "id": "redis",
@@ -67,7 +76,9 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
     "rating": 4.8,
     "difficulty": "Intermediate",
-    "badge": "Cache"
+    "badge": "Cache",
+    "badgeColor": "#FEE2E2",
+    "badgeTextColor": "#DC2626"
   },
   {
     "id": "javascript",
@@ -77,7 +88,9 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
-    "badge": "Ubiquitous"
+    "badge": "Ubiquitous",
+    "badgeColor": "#FEF3C7",
+    "badgeTextColor": "#D97706"
   },
   {
     "id": "typescript",
@@ -87,7 +100,9 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
     "rating": 4.9,
     "difficulty": "Intermediate",
-    "badge": "Essential"
+    "badge": "Essential",
+    "badgeColor": "#E0F2FE",
+    "badgeTextColor": "#0284C7"
   },
   {
     "id": "java",
@@ -97,7 +112,9 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
     "rating": 4.6,
     "difficulty": "Intermediate",
-    "badge": "Robust"
+    "badge": "Robust",
+    "badgeColor": "#E0F2FE",
+    "badgeTextColor": "#0284C7"
   },
   {
     "id": "tailwind",
@@ -107,7 +124,9 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
-    "badge": "Modern"
+    "badge": "Modern",
+    "badgeColor": "#CFFAFE",
+    "badgeTextColor": "#0891B2"
   },
   {
     "id": "docker",
@@ -117,6 +136,8 @@
     "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
     "rating": 4.9,
     "difficulty": "Intermediate",
-    "badge": "Containers"
+    "badge": "Containers",
+    "badgeColor": "#CFFAFE",
+    "badgeTextColor": "#0891B2"
   }
 ]

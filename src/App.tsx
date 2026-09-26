@@ -12,6 +12,8 @@ interface Technology {
   rating: number;
   difficulty: string;
   badge: string;
+  badgeColor: string;
+  badgeTextColor: string;
 }
 
 function App() {
@@ -89,7 +91,7 @@ function App() {
             <span className="text-lg">Dev Stack</span>
           </a>
 
-          {/* Desktop Navigation */}
+          {/* Navigation */}
           <div className="hidden items-center gap-8 text-sm text-gray-600 md:flex">
             <a href="#home" className="font-medium text-pink-500">
               Home
@@ -263,7 +265,6 @@ function App() {
                   className="flex min-w-0 flex-col rounded-lg border border-gray-100 bg-white p-2.5 shadow-sm transition hover:shadow-md"
                 >
                   {/* Icon and Badge */}
-                  {/* Icon and Badge */}
                   <div className="flex items-start justify-between">
                     <div className="flex h-7 w-7 items-center justify-center">
                       <img
@@ -273,7 +274,13 @@ function App() {
                       />
                     </div>
 
-                    <span className="rounded-full bg-blue-50 px-2 py-1 text-[8px] font-medium text-blue-500">
+                    <span
+                      style={{
+                        backgroundColor: technology.badgeColor,
+                        color: technology.badgeTextColor,
+                      }}
+                      className="rounded-full px-2 py-1 text-[8px] font-medium"
+                    >
                       {technology.badge}
                     </span>
                   </div>
