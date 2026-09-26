@@ -35,7 +35,6 @@ function App() {
       });
   }, []);
 
-  // Add technology
   const addToStack = (technology: Technology) => {
     const alreadyAdded = stack.some((item) => item.id === technology.id);
 
@@ -327,7 +326,6 @@ function App() {
             </div>
 
             {/* RIGHT SIDE */}
-            {/* RIGHT SIDE - YOUR STACK */}
             <div className="flex justify-center lg:justify-end">
               <aside className="box-border flex h-[297px] w-[280px] flex-col rounded-[15px] border border-[#E5E7EB] bg-white px-[16px] pt-[25px] pb-[10px]">
                 {/* Heading */}
@@ -343,7 +341,7 @@ function App() {
                   </p>
                 </div>
 
-                {/* Empty State */}
+                {/* Empty */}
                 {stack.length === 0 ? (
                   <div className="mt-[15px] flex h-[67px] w-full items-center justify-center rounded-[10px] border border-dashed border-[#DCE3ED]">
                     <span className="text-[12px] text-[#94A3B8]">
@@ -359,7 +357,7 @@ function App() {
                           key={technology.id}
                           className="flex h-[50px] shrink-0 items-center justify-between rounded-[9px] border border-[#E2E8F0] bg-white px-[10px]"
                         >
-                          {/* Icon + Details */}
+                          {/* Icon */}
                           <div className="flex min-w-0 items-center gap-[10px]">
                             <img
                               src={technology.icon}
@@ -404,6 +402,7 @@ function App() {
           </div>
         )}
       </section>
+
       {/* FOOTER */}
       <footer className="mt-16 border-t border-[#F1F5F9] bg-white">
         <div className="mx-auto max-w-[1400px] px-6 lg:px-16">
@@ -525,7 +524,6 @@ function App() {
 
           {/* Bottom Footer */}
           <div className="flex items-center justify-between border-t border-[#F1F5F9] py-6 text-[10px] text-[#94A3B8]">
-            {/* Copyright */}
             <p>© 2026 Dev Stack. All rights reserved.</p>
 
             {/* Bottom Links */}
