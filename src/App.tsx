@@ -80,15 +80,18 @@ function App() {
             className="flex items-center gap-2 font-bold text-[#172033]"
           >
             <span
-              className="flex h-8 w-8 items-center justify-center rounded-lg text-sm text-white"
+              className="flex h-8 w-8 items-center justify-center rounded-lg text-sm font-bold text-white"
               style={{
-                background: "linear-gradient(90deg, #ff6b35, #e91e8c, #9c27b0)",
+                background: "linear-gradient(135deg, #D946EF 0%, #E11D8A 100%)",
               }}
             >
               DS
             </span>
 
-            <span className="text-lg">Dev Stack</span>
+            <span className="text-lg font-bold">
+              <span className="text-[#172033]">Dev</span>
+              <span className="ml-[3px] text-[#E11D8A]">Stack</span>
+            </span>
           </a>
 
           {/* Navigation */}
@@ -121,9 +124,9 @@ function App() {
             </button>
 
             <button
-              className="rounded-full px-5 py-2 text-sm font-medium text-white shadow-sm"
+              className="rounded-full px-5 py-2 text-sm font-medium text-white shadow-sm transition hover:opacity-90"
               style={{
-                background: "linear-gradient(90deg, #ff6b35, #e91e8c, #9c27b0)",
+                background: "linear-gradient(90deg, #E11D8A, #D9167A)",
               }}
             >
               Sign Up
@@ -404,26 +407,27 @@ function App() {
       <footer className="mt-16 border-t border-[#F1F5F9] bg-white">
         <div className="mx-auto max-w-[1400px] px-6 lg:px-16">
           {/* Main Footer */}
-          <div className="flex flex-col gap-10 py-12 md:flex-row md:items-start md:justify-between">
+          <div className="flex items-start py-12">
             {/* Brand Section */}
-            <div className="md:w-[40%]">
+            <div className="w-[397px] shrink-0">
               {/* Logo */}
               <a
                 href="#home"
                 className="flex items-center gap-2 font-bold text-[#172033]"
               >
                 <span
-                  className="flex h-[20px] w-[20px] items-center justify-center rounded-[5px] text-[9px] font-bold text-white"
+                  className="flex h-8 w-8 items-center justify-center rounded-lg text-sm font-bold text-white"
                   style={{
                     background:
-                      "linear-gradient(90deg, #ff6b35, #e91e8c, #9c27b0)",
+                      "linear-gradient(135deg, #D946EF 0%, #E11D8A 100%)",
                   }}
                 >
                   DS
                 </span>
 
-                <span className="text-[16px]">
-                  Dev<span className="text-pink-500">Stack</span>
+                <span className="text-lg font-bold">
+                  <span className="text-[#172033]">Dev</span>
+                  <span className="ml-[3px] text-[#E11D8A]">Stack</span>
                 </span>
               </a>
 
@@ -449,77 +453,77 @@ function App() {
               </div>
             </div>
 
-            {/* Product + Company + Legal */}
-            <div className="grid grid-cols-[120px_120px_120px] gap-[79px]">
-              {/* Product */}
-              <div>
-                <h4 className="text-[10px] font-bold uppercase tracking-wide text-[#172033]">
-                  Product
-                </h4>
+            {/* Product */}
+            <div className="w-[120px] shrink-0">
+              <h4 className="text-[10px] font-bold uppercase tracking-wide text-[#172033]">
+                Product
+              </h4>
 
-                <div className="mt-3 flex flex-col gap-2 text-[10px] text-[#94A3B8]">
-                  <a href="#home" className="transition hover:text-pink-500">
-                    Home
-                  </a>
+              <div className="mt-3 flex flex-col gap-2 text-[10px] text-[#94A3B8]">
+                <a href="#home" className="transition hover:text-pink-500">
+                  Home
+                </a>
 
-                  <a
-                    href="#technologies"
-                    className="transition hover:text-pink-500"
-                  >
-                    Technologies
-                  </a>
+                <a
+                  href="#technologies"
+                  className="transition hover:text-pink-500"
+                >
+                  Technologies
+                </a>
 
-                  <a
-                    href="#projects"
-                    className="transition hover:text-pink-500"
-                  >
-                    Projects
-                  </a>
-                </div>
+                <a href="#projects" className="transition hover:text-pink-500">
+                  Projects
+                </a>
               </div>
+            </div>
 
-              {/* Company */}
-              <div>
-                <h4 className="text-[10px] font-bold uppercase tracking-wide text-[#172033]">
-                  Company
-                </h4>
+            {/* Space between Product and Company */}
+            <div className="w-[79px] shrink-0" />
 
-                <div className="mt-3 flex flex-col gap-2 text-[10px] text-[#94A3B8]">
-                  <a href="#about" className="transition hover:text-pink-500">
-                    About
-                  </a>
+            {/* Company */}
+            <div className="w-[120px] shrink-0">
+              <h4 className="text-[10px] font-bold uppercase tracking-wide text-[#172033]">
+                Company
+              </h4>
 
-                  <a href="#contact" className="transition hover:text-pink-500">
-                    Contact
-                  </a>
+              <div className="mt-3 flex flex-col gap-2 text-[10px] text-[#94A3B8]">
+                <a href="#about" className="transition hover:text-pink-500">
+                  About
+                </a>
 
-                  <a href="#" className="transition hover:text-pink-500">
-                    Careers
-                  </a>
-                </div>
+                <a href="#contact" className="transition hover:text-pink-500">
+                  Contact
+                </a>
+
+                <a href="#" className="transition hover:text-pink-500">
+                  Careers
+                </a>
               </div>
+            </div>
 
-              {/* Legal */}
-              <div>
-                <h4 className="text-[10px] font-bold uppercase tracking-wide text-[#172033]">
-                  Legal
-                </h4>
+            {/* Space between Company and Legal */}
+            <div className="w-[78px] shrink-0" />
 
-                <div className="mt-3 flex flex-col gap-2 text-[10px] text-[#94A3B8]">
-                  <a href="#" className="transition hover:text-pink-500">
-                    Privacy Policy
-                  </a>
+            {/* Legal */}
+            <div className="w-[120px] shrink-0">
+              <h4 className="text-[10px] font-bold uppercase tracking-wide text-[#172033]">
+                Legal
+              </h4>
 
-                  <a href="#" className="transition hover:text-pink-500">
-                    Terms of Service
-                  </a>
-                </div>
+              <div className="mt-3 flex flex-col gap-2 text-[10px] text-[#94A3B8]">
+                <a href="#" className="transition hover:text-pink-500">
+                  Privacy Policy
+                </a>
+
+                <a href="#" className="transition hover:text-pink-500">
+                  Terms of Service
+                </a>
               </div>
             </div>
           </div>
 
           {/* Bottom Footer */}
-          <div className="flex flex-col gap-3 border-t border-[#F1F5F9] py-6 text-[10px] text-[#94A3B8] sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-center justify-between border-t border-[#F1F5F9] py-6 text-[10px] text-[#94A3B8]">
             {/* Copyright */}
             <p>© 2026 Dev Stack. All rights reserved.</p>
 
