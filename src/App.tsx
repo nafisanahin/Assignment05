@@ -323,6 +323,7 @@ function App() {
             </div>
 
             {/* RIGHT SIDE */}
+            {/* RIGHT SIDE - YOUR STACK */}
             <div className="flex justify-center lg:justify-end">
               <aside className="box-border flex h-[297px] w-[280px] flex-col rounded-[15px] border border-[#E5E7EB] bg-white px-[16px] pt-[25px] pb-[10px]">
                 {/* Heading */}
@@ -332,57 +333,68 @@ function App() {
                   </h3>
 
                   <p className="mt-[2px] text-[13px] leading-[16px] text-[#94A3B8]">
-                    {stack.length} Technology{stack.length === 1 ? "" : "ies"}{" "}
-                    Selected
+                    {stack.length === 0
+                      ? "No technologies selected yet."
+                      : `${stack.length} Technology${stack.length === 1 ? "" : "ies"} Selected`}
                   </p>
                 </div>
 
-                {/* Selected Technologies */}
-                <div className="mt-[15px] flex flex-col gap-[4px] overflow-hidden">
-                  {stack.map((technology) => (
-                    <div
-                      key={technology.id}
-                      className="flex h-[50px] shrink-0 items-center justify-between rounded-[9px] border border-[#E2E8F0] bg-white px-[10px]"
-                    >
-                      {/* Icon + Details */}
-                      <div className="flex min-w-0 items-center gap-[10px]">
-                        <img
-                          src={technology.icon}
-                          alt={technology.name}
-                          className="h-[28px] w-[28px] shrink-0 object-contain"
-                        />
+                {/* Empty State */}
+                {stack.length === 0 ? (
+                  <div className="mt-[15px] flex h-[67px] w-full items-center justify-center rounded-[10px] border border-dashed border-[#DCE3ED]">
+                    <span className="text-[12px] text-[#94A3B8]">
+                      Your stack is empty.
+                    </span>
+                  </div>
+                ) : (
+                  <>
+                    {/* Selected Technologies */}
+                    <div className="mt-[15px] flex flex-col gap-[4px] overflow-hidden">
+                      {stack.map((technology) => (
+                        <div
+                          key={technology.id}
+                          className="flex h-[50px] shrink-0 items-center justify-between rounded-[9px] border border-[#E2E8F0] bg-white px-[10px]"
+                        >
+                          {/* Icon + Details */}
+                          <div className="flex min-w-0 items-center gap-[10px]">
+                            <img
+                              src={technology.icon}
+                              alt={technology.name}
+                              className="h-[28px] w-[28px] shrink-0 object-contain"
+                            />
 
-                        <div className="flex min-w-0 flex-col">
-                          <span className="truncate text-[12px] font-semibold leading-[15px] text-[#172033]">
-                            {technology.name}
-                          </span>
+                            <div className="flex min-w-0 flex-col">
+                              <span className="truncate text-[12px] font-semibold leading-[15px] text-[#172033]">
+                                {technology.name}
+                              </span>
 
-                          <span className="text-[8px] leading-[11px] text-[#94A3B8]">
-                            {technology.category}
-                          </span>
+                              <span className="text-[8px] leading-[11px] text-[#94A3B8]">
+                                {technology.category}
+                              </span>
+                            </div>
+                          </div>
+
+                          {/* Remove */}
+                          <button
+                            onClick={() => removeFromStack(technology.id)}
+                            aria-label={`Remove ${technology.name}`}
+                            className="flex h-[28px] w-[28px] shrink-0 items-center justify-center text-[25px] font-light leading-none text-[#94A3B8] transition hover:text-red-500"
+                          >
+                            ×
+                          </button>
                         </div>
-                      </div>
-
-                      {/* Remove */}
-                      <button
-                        onClick={() => removeFromStack(technology.id)}
-                        aria-label={`Remove ${technology.name}`}
-                        className="flex h-[28px] w-[28px] shrink-0 items-center justify-center text-[25px] font-light leading-none text-[#94A3B8] transition hover:text-red-500"
-                      >
-                        ×
-                      </button>
+                      ))}
                     </div>
-                  ))}
-                </div>
 
-                {/* Remove All */}
-                <button
-                  onClick={removeAll}
-                  disabled={stack.length === 0}
-                  className="mt-auto h-[30px] w-full shrink-0 rounded-[8px] border border-[#FECACA] bg-white text-[14px] font-bold text-[#DC2626] transition hover:bg-[#FFF5F5] disabled:opacity-50"
-                >
-                  Remove All
-                </button>
+                    {/* Remove All */}
+                    <button
+                      onClick={removeAll}
+                      className="mt-auto h-[30px] w-full shrink-0 rounded-[8px] border border-[#FECACA] bg-white text-[14px] font-bold text-[#DC2626] transition hover:bg-[#FFF5F5]"
+                    >
+                      Remove All
+                    </button>
+                  </>
+                )}
               </aside>
             </div>
           </div>
