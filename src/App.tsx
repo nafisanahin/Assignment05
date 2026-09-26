@@ -162,18 +162,19 @@ function App() {
         )}
       </nav>
 
-      {/*HERO SECTION */}
+      {/* HERO SECTION */}
       <section
         id="home"
-        className="mx-auto max-w-[1400px] px-6 py-16 lg:px-16 lg:py-24"
+        className="mx-auto max-w-[1400px] px-6 py-8 lg:px-12 lg:py-12"
       >
-        <div className="grid items-center gap-12 md:grid-cols-2">
+        <div className="grid items-center gap-6 md:grid-cols-[55%_45%]">
           {/* LEFT CONTENT */}
-          <div>
-            <h1 className="text-4xl font-extrabold leading-tight text-[#111827] sm:text-5xl lg:text-6xl">
-              Build Your Ideal
-              <br />
+          <div className="min-w-0">
+            <h1 className="text-4xl font-extrabold leading-tight text-[#111827] sm:text-5xl lg:text-5xl">
+              <span className="block">Build Your Ideal</span>
+
               <span
+                className="block whitespace-nowrap"
                 style={{
                   background:
                     "linear-gradient(90deg, #ff6b35, #e91e8c, #9c27b0)",
@@ -185,14 +186,14 @@ function App() {
               </span>
             </h1>
 
-            <p className="mt-6 max-w-xl text-base leading-7 text-gray-500 sm:text-lg">
+            <p className="mt-5 max-w-xl text-base leading-7 text-gray-500 sm:text-lg">
               Explore frontend, backend, database, and tooling options, compare
               them side by side, and put together the stack that fits your next
               project.
             </p>
 
             {/* BUTTONS */}
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-7 flex flex-wrap gap-3">
               <a
                 href="#technologies"
                 className="rounded-lg px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:opacity-90"
@@ -214,11 +215,11 @@ function App() {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="flex justify-center">
+          <div className="flex items-center justify-center">
             <img
               src={heroImg}
               alt="Development Stack"
-              className="w-full max-w-[430px] object-contain"
+              className="w-full max-w-[460px] object-contain"
             />
           </div>
         </div>
