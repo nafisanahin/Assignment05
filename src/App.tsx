@@ -400,6 +400,142 @@ function App() {
           </div>
         )}
       </section>
+      {/* FOOTER */}
+      <footer className="mt-16 border-t border-[#F1F5F9] bg-white">
+        <div className="mx-auto max-w-[1400px] px-6 lg:px-16">
+          {/* Main Footer */}
+          <div className="flex flex-col gap-10 py-12 md:flex-row md:items-start md:justify-between">
+            {/* Brand Section */}
+            <div className="md:w-[40%]">
+              {/* Logo */}
+              <a
+                href="#home"
+                className="flex items-center gap-2 font-bold text-[#172033]"
+              >
+                <span
+                  className="flex h-[20px] w-[20px] items-center justify-center rounded-[5px] text-[9px] font-bold text-white"
+                  style={{
+                    background:
+                      "linear-gradient(90deg, #ff6b35, #e91e8c, #9c27b0)",
+                  }}
+                >
+                  DS
+                </span>
+
+                <span className="text-[16px]">
+                  Dev<span className="text-pink-500">Stack</span>
+                </span>
+              </a>
+
+              {/* Description */}
+              <p className="mt-3 max-w-[310px] text-[11px] leading-[16px] text-[#94A3B8]">
+                Curated tools, technologies, and resources for developers
+                building modern software.
+              </p>
+
+              {/* Social Links */}
+              <div className="mt-4 flex gap-4 text-[10px] font-bold text-[#475569]">
+                <a href="#" className="transition hover:text-pink-500">
+                  GitHub
+                </a>
+
+                <a href="#" className="transition hover:text-pink-500">
+                  Twitter
+                </a>
+
+                <a href="#" className="transition hover:text-pink-500">
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+
+            {/* Product + Company + Legal */}
+            <div className="grid grid-cols-[120px_120px_120px] gap-[79px]">
+              {/* Product */}
+              <div>
+                <h4 className="text-[10px] font-bold uppercase tracking-wide text-[#172033]">
+                  Product
+                </h4>
+
+                <div className="mt-3 flex flex-col gap-2 text-[10px] text-[#94A3B8]">
+                  <a href="#home" className="transition hover:text-pink-500">
+                    Home
+                  </a>
+
+                  <a
+                    href="#technologies"
+                    className="transition hover:text-pink-500"
+                  >
+                    Technologies
+                  </a>
+
+                  <a
+                    href="#projects"
+                    className="transition hover:text-pink-500"
+                  >
+                    Projects
+                  </a>
+                </div>
+              </div>
+
+              {/* Company */}
+              <div>
+                <h4 className="text-[10px] font-bold uppercase tracking-wide text-[#172033]">
+                  Company
+                </h4>
+
+                <div className="mt-3 flex flex-col gap-2 text-[10px] text-[#94A3B8]">
+                  <a href="#about" className="transition hover:text-pink-500">
+                    About
+                  </a>
+
+                  <a href="#contact" className="transition hover:text-pink-500">
+                    Contact
+                  </a>
+
+                  <a href="#" className="transition hover:text-pink-500">
+                    Careers
+                  </a>
+                </div>
+              </div>
+
+              {/* Legal */}
+              <div>
+                <h4 className="text-[10px] font-bold uppercase tracking-wide text-[#172033]">
+                  Legal
+                </h4>
+
+                <div className="mt-3 flex flex-col gap-2 text-[10px] text-[#94A3B8]">
+                  <a href="#" className="transition hover:text-pink-500">
+                    Privacy Policy
+                  </a>
+
+                  <a href="#" className="transition hover:text-pink-500">
+                    Terms of Service
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Footer */}
+          <div className="flex flex-col gap-3 border-t border-[#F1F5F9] py-6 text-[10px] text-[#94A3B8] sm:flex-row sm:items-center sm:justify-between">
+            {/* Copyright */}
+            <p>© 2026 Dev Stack. All rights reserved.</p>
+
+            {/* Bottom Links */}
+            <div className="flex gap-5">
+              <a href="#" className="transition hover:text-pink-500">
+                Privacy
+              </a>
+
+              <a href="#" className="transition hover:text-pink-500">
+                Terms
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
 
       {/* Toast Notifications */}
       <ToastContainer position="top-right" />
